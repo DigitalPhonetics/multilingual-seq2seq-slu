@@ -1,0 +1,70 @@
+# Trained with RTX A6000 (48GB) x 4 GPUs.
+batch_type: numel
+batch_bins: 600000000
+accum_grad: 1
+max_epoch: 70
+patience: 3
+init: none
+best_model_criterion:
+-   - valid
+    - loss
+    - min
+keep_nbest_models: 10
+
+encoder: conformer
+encoder_conf:
+    output_size: 1024
+    attention_heads: 8
+    linear_units: 4096
+    num_blocks: 8
+    dropout_rate: 0.0
+    positional_dropout_rate: 0.0
+    attention_dropout_rate: 0.0
+    input_layer: conv2d
+    normalize_before: true
+    macaron_style: true
+    pos_enc_layer_type: "rel_pos"
+    rel_pos_type: "latest"
+    selfattention_layer_type: "rel_selfattn"
+    activation_type: "swish"
+    use_cnn_module: true
+    cnn_module_kernel: 31
+
+# postencoder
+postencoder: hugging_face_transformers
+postencoder_conf:
+    model_name_or_path: "dummy"
+    length_adaptor_n_layers: 1
+
+freeze_param: [
+    "frontend.upstream",
+]
+
+frontend: s3prl
+frontend_conf:
+    frontend_conf:
+        upstream: wav2vec2_url  # Note: If the upstream is changed, please change the input_size in the preencoder.
+        upstream_ckpt: https://dl.fbaipublicfiles.com/fairseq/wav2vec/xlsr2_300m.pt
+    download_dir: ./hub
+    multilayer_feature: True
+
+preencoder: linear
+preencoder_conf:
+    input_size: 1024  # Note: If the upstream is changed, please change this value accordingly.
+    output_size: 80
+
+model_conf:
+    ctc_weight: 1.0
+    extract_feats_in_collect_stats: false
+    # BART dictionary customizations
+    ignore_id: 1
+    sym_blank: "<pad>"
+    sym_sos: "<s>"
+    sym_eos: "</s>"
+
+optim: adam
+optim_conf:
+    lr: 0.00005
+scheduler: warmuplr
+scheduler_conf:
+    warmup_steps: 25000
