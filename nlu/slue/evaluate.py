@@ -140,8 +140,8 @@ def get_classification_result(hyp_file, ref_file):
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("ref", required=True, type=str, help="Reference file")
-parser.add_argument("hyp", type=str, required=True, help="Hypothesis file")
+parser.add_argument("ref", type=str, help="Reference file")
+parser.add_argument("hyp", type=str, help="Hypothesis file")
 args = parser.parse_args()
 
 result, label_result = get_classification_result(

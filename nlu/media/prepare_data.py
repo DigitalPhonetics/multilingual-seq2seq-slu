@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 
 files = {
     "train": ["lot1", "lot2", "lot3", "lot4"],
-    "dev": ["testHC_a_blanc"],
+    "val": ["testHC_a_blanc"],
     "test": ["testHC"],
 }
 

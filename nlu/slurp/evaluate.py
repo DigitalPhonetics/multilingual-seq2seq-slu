@@ -88,8 +88,8 @@ def parse_examples(filenames):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="SLURPS evaluation script modified to work with plain text input")
-    parser.add_argument("ref", required=True, type=str, help="Reference file")
-    parser.add_argument("hyp", type=str, required=True, help="Hypothesis file")
+    parser.add_argument("ref", type=str, help="Reference file")
+    parser.add_argument("hyp", type=str, help="Hypothesis file")
     parser.add_argument("--average", type=str, default="micro", help="The averaging modality {micro, macro}.")
     parser.add_argument("--full", action="store_true", help="Print the full results, including per-label metrics.")
     parser.add_argument("--errors", action="store_true", help="Print TPs, FPs, and FNs in each row.")
