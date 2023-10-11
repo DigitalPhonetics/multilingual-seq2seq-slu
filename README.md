@@ -1,6 +1,4 @@
-# Multilingual Sequence-to-Sequence End-to-End SLU
-
-Leveraging Multilingual Self-Supervised Pretrained Models for Sequence-to-Sequence End-to-End Spoken Language Understanding
+# [Leveraging Multilingual Self-Supervised Pretrained Models for Sequence-to-Sequence End-to-End Spoken Language Understanding](https://arxiv.org/abs/2310.06103)
 
 ## NLU
 
@@ -78,3 +76,12 @@ Cross-lingual PortMEDIA-Lang SLU model finetuned from the MEDIA SLU model: [Link
 | PostEnc MC (1K hours English data) |  | [Link](https://zenodo.org/record/8361271/files/conformer08x08h_d1024_xlsr_ts_lr5e-5_english_fpe.pth?download=1) |
 | PostDec AED (7K hours data) |  | [Link](https://zenodo.org/record/8386716/files/conformer08x08h_d1024_xlsr_ts_lr5e-5_attcela_7kh_ave.pth?download=1) |
 
+## Citation
+```
+@article{denisov2023leveraging,
+  title={Leveraging Multilingual Self-Supervised Pretrained Models for Sequence-to-Sequence End-to-End Spoken Language Understanding},
+  author={Denisov, Pavel and Vu, Ngoc Thang},
+  journal={arXiv preprint arXiv:2310.06103},
+  year={2023}
+}
+```
