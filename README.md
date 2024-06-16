@@ -1,4 +1,5 @@
-# [Leveraging Multilingual Self-Supervised Pretrained Models for Sequence-to-Sequence End-to-End Spoken Language Understanding](https://arxiv.org/abs/2310.06103)
+# Leveraging Multilingual Self-Supervised Pretrained Models for Sequence-to-Sequence End-to-End Spoken Language Understanding
+[[Paper]](https://arxiv.org/abs/2310.06103)
 
 ## NLU
 
@@ -78,10 +79,15 @@ Cross-lingual PortMEDIA-Lang SLU model finetuned from the MEDIA SLU model: [Link
 
 ## Citation
 ```
-@article{denisov2023leveraging,
-  title={Leveraging Multilingual Self-Supervised Pretrained Models for Sequence-to-Sequence End-to-End Spoken Language Understanding},
+@INPROCEEDINGS{10389655,
   author={Denisov, Pavel and Vu, Ngoc Thang},
-  journal={arXiv preprint arXiv:2310.06103},
-  year={2023}
+  booktitle={2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)}, 
+  title={Leveraging Multilingual Self-Supervised Pretrained Models for Sequence-to-Sequence End-to-End Spoken Language Understanding}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-8},
+  keywords={Training;Error analysis;Conferences;Predictive models;Benchmark testing;Filling;Data models;spoken language understanding;self-supervised learning;end-to-end;sequence-to-sequence;multilingual},
+  doi={10.1109/ASRU57964.2023.10389655}
 }
 ```
